@@ -30,7 +30,7 @@
     <![endif]-->
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar">
-    <script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
+    <!--<script src="https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js"></script>
     <script>
         window.loadWatsonAssistantChat({
             integrationID: "1424754d-a666-48e4-aa4b-03fb1bfa7ba8",
@@ -38,6 +38,29 @@
         }).then(function (instance) {
             instance.render();
         });
+    </script>-->
+
+    <div class="fb-customerchat" page_id="103284924443120"></div>
+
+    <script>
+
+        window.fbAsyncInit = function () {
+            FB.init({
+                appId: '494254311300476',
+                autoLogAppEvents: true,
+                xfbml: true,
+                version: 'v2.11'
+            });
+        };
+
+        (function (d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) { return; }
+            js = d.createElement(s); js.id = id;
+            js.src = "https://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+
     </script>
     <div id="main-wrapper">
         <!-- Page Preloader -->
@@ -56,9 +79,9 @@
                         <p class="lead">Digital Transformation Architect</p>
                         <ul class="social-icon">
                             <li><a href="https://fb.me/ahmedshokrv"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
-                            
+
                             <li><a href="https://www.linkedin.com/in/ahmedshokr/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
-                            
+
                         </ul>
                     </div>
                     <div class="profile-img"></div>
@@ -260,7 +283,7 @@
 
                                     <p>Kuwait</p>
                                 </div>
-                                
+
                             </div>
                         </div>
                         <!--.row-->
@@ -296,9 +319,9 @@
                 </section>
                 <!-- .section-education -->
 
-                
 
-                
+
+
 
                 <section class="section-contact section-wrapper gray-bg">
                     <div class="container-fluid">
@@ -328,7 +351,7 @@
                             </div>
                         </div>
                         <!--.row-->
-                        
+
                     </div>
                     <!--.container-fluid-->
                 </section>
