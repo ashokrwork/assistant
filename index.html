@@ -365,33 +365,19 @@
     <!-- Bootstrap -->
     <script src="js/bootstrap.min.js"></script>
     <script src="js/scripts.js"></script>
-
-    <script>
-        window.fbAsyncInit = function () {
-            FB.init({
-                appId: '494254311300476',
-                autoLogAppEvents: true,
-                xfbml: true,
-                version: 'v2.11'
-            });
-        };
-        (function (d, s, id) {
-            var js, fjs = d.getElementsByTagName(s)[0];
-            if (d.getElementById(id)) { return; }
-            js = d.createElement(s); js.id = id;
-            js.src = "https://ashokrwork.github.io/assistant/files/scripts.js";
-            fjs.parentNode.insertBefore(js, fjs);
-        }(document, 'script', 'facebook-jssdk'));
-    </script>
-
-    <!-- Your customer chat code -->
-    <div class="fb-customerchat"
-         attribution=setup_tool
-         page_id="103284924443120"
-         theme_color="#BE59B9"
-         logged_in_greeting="Hi, my name is Joe Mr. Ahmed's assistant."
-         logged_out_greeting="Hi, my name is Joe Mr. Ahmed's assistant.">
-    </div>
-
+<script>
+  window.watsonAssistantChatOptions = {
+      integrationID: "1424754d-a666-48e4-aa4b-03fb1bfa7ba8", // The ID of this integration.
+      region: "eu-gb", // The region your integration is hosted in.
+      serviceInstanceID: "fabfa120-bc14-433a-a1d2-fe2eb7e9414b", // The ID of your service instance.
+      onLoad: function(instance) { instance.render(); }
+    };
+  setTimeout(function(){
+    const t=document.createElement('script');
+    t.src="https://web-chat.global.assistant.watson.appdomain.cloud/loadWatsonAssistantChat.js";
+    document.head.appendChild(t);
+  });
+</script>
+    
 </body>
 </html>
