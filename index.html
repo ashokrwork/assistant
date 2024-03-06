@@ -39,50 +39,7 @@
   })(document, 'https://grow.clearbitjs.com/api/pixel.js?v=');
 </script>
 
-    <script src="https://cdn.dapi.com/dapi/v2/sdk.js"></script>
-        <script>
-            var ba = null;
-
-var handler = Dapi.create({
-  environment: Dapi.environments.production, //or .production
-  appKey: "c658979c5601fe7320589f0601869fa109364d0ab8d444c9c4b405df77fb3567",
-  countries: ["AE"],
-  bundleID: "com.finflx.individual", // bundleID you set on Dashboard
-  clientUserID: "Test_Web",
-  isCachedEnabled: true,
-  isExperimental: false,
-  clientHeaders: {},
-  clientBody: {},
-  onSuccessfulLogin: function (bankAccount) {
-    ba = bankAccount; //explained in the next step
-  },
-  onFailedLogin: function (err) {
-    if (err != null) {
-      console.log("Error");
-      console.log(err);
-    } else {
-      console.log("No error");
-    }
-  },
-  onReady: function () {
-    handler.open(); // opens the Connect widget
-  },
-  onExit: function () {
-    console.log("User exited the flow");
-  },
-  onAuthModalOpen: function () {
-    console.log("MFA modal opened");
-  },
-  onAuthModalSubmit: function () {
-    console.log("MFA answer submitted");
-  },
-  interceptRequest: function ({ body, headers }) {
-    // You can modify the request body and headers here
-    return { body, headers };
-  },
-});
-
-        </script>
+    
     
 </head>
 <body id="page-top" data-spy="scroll" data-target=".navbar">
