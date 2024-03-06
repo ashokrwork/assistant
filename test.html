@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1080px, initial-scale=1.0">
+  <title>DAPI</title>
+</head>
+<body>
+  <script src="https://cdn.dapi.com/connect/v3/connector.js"></script>
+  <script>
+    var handler = Dapi.create({
+      environment: Dapi.environments.production, //either .sandbox or .production
+      appKey: 'c658979c5601fe7320589f0601869fa109364d0ab8d444c9c4b405df77fb3567', //appKey you created on Dapi Dashboard
+      countries: ['AE'], //Alpha-2 format for country codes
+      isExperimental: false, //Recommended to keep this false, gives access to banks that are experimental / in beta
+      onSuccess: (d) => console.log(d), //Capture the success
+      onFailure: (e) => console.log(e), // Capture a failure
+      onReady: (r) => {
+        console.log("Ready!"),
+        handler.open() //open the widget
+      }
+    });
+  </script>
+</body>
+</html>
